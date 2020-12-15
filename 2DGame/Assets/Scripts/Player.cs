@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     {        
         float h = Input.GetAxis("Horizontal");       
         rig.velocity = new Vector2(h * speed, rig.velocity.y);
+        
     }
 
     
