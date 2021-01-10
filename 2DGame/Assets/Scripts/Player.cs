@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
 
     private void Dead(string obj)
     {
-        if (obj.Equals("DeadZone"))
+        if (obj.Equals("DeadZone") || obj.Equals("Bullet_Enemy"))
         {
             ani.SetBool("isDead", true);
             enabled = false;
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Dead(collision.gameObject.name);
+        Dead(collision.gameObject.tag);
     }
 
     private void OnDrawGizmosSelected()
